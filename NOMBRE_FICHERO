@@ -1,0 +1,2 @@
+GREGO;2025-10-06T13:12:34.906539214;NumberFormatException;For input string: "a"
+GREGO;2025-10-06T13:13:11.594889186;IllegalStateException;Excepción personalizada de usuario. Entrada: 3
