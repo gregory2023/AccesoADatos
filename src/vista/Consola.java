@@ -21,7 +21,7 @@ public class Consola {
     }
 
 
-     //Metodo público para iniciar la aplicación (llamado desde Main).
+     //Metodo llamado desde Main).
 
     public void iniciar() {
         solicitarUsuario();
@@ -36,7 +36,7 @@ public class Consola {
             System.out.println("El usuario no puede estar vacío. Usando 'Sistema'.");
             usuarioActual = "Sistema";
         }
-        // Nota: La carga inicial del fichero se realiza automáticamente al instanciar ServicioFichero
+        // Nota: La carga inicial del fichero se realiza automáticamente al instanciar ServicioFichero , depende de su formato si se carga o no
         System.out.println("Bienvenido/a, " + usuarioActual + ".");
     }
 
@@ -67,9 +67,9 @@ public class Consola {
         } while (opcion != 0);
     }
 
-    /**
-     * Lanza la excepción personalizada basada en la entrada y la captura.
-     */
+
+     //Lanza la excepción personalizada basada en la entrada y la captura.
+
     private void provocarExcepcion() {
         System.out.println("\n--- PROVOCAR EXCEPCIÓN ---");
         System.out.println("Ingrese un carácter para provocar intencionalmente una excepción:");
@@ -91,15 +91,15 @@ public class Consola {
                 char c = s.charAt(0);
             }
             else {
-                // IllegalStateException (simulando una ExcepcionPersonalizada)
+                // IllegalStateException (ExcepcionPersonalizada)
                 String mensajeErrorGenerico = "Error: se esperaba un caracter  pero metiste: " + entrada;
                 throw new IllegalStateException(mensajeErrorGenerico);
             }
         } catch (Exception e) {
-            // Bloque vital: Captura cualquier excepción y la registra.
+            // Captura cualquier excepción y la registra.
             System.out.println("\n Excepción capturada: " + e.getClass().getSimpleName());
 
-            // La Vista DELEGA la tarea de crear la incidencia al Controlador
+            // La Vista pasa la tarea de crear la incidencia al Controlador
             boolean registrado = controlador.crearIncidencia(usuarioActual, e);
 
             if (registrado) {
@@ -111,7 +111,7 @@ public class Consola {
     }
 
 
-     //Muestra las incidencias registradas para el usuario actual con el formato específico solicitado.
+     //Muestra las incidencias registradas para el usuario actual con el formato .
 
     private void mostrarIncidenciasUsuario() {
         System.out.println("\n--- INCIDENCIAS DE " + usuarioActual.toUpperCase() + " ---");
@@ -125,6 +125,7 @@ public class Consola {
 
         System.out.println("Total de incidencias encontradas: " + misIncidencias.size());
 
+        //este metodo se llama funciones labda lo repase con la IA muy bueno para la programcion mas funcional , lo inclui , lo entiendo muy bien
         // Aplicamos el formato de salida solicitado en el bucle:
         misIncidencias.forEach(i -> {
             System.out.println("-- " + i.getFecha().format(FORMATO_FECHA_EXPORT) + ";" +

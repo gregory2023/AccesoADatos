@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Clase que gestiona la colección de todas las Incidencias en memoria.
- */
+
+ //Clase que gestiona la colección de todas las Incidencias en memoria.
+
 public class ListaIncidencia {
 
     // Lista interna para almacenar todos los objetos Incidencia
@@ -16,27 +16,26 @@ public class ListaIncidencia {
         this.incidencias = new ArrayList<>();
     }
 
-    /**
-     * Agrega una Incidencia a la colección.
-     */
+     //Agrega una Incidencia a la colección.
+
     public void agregarIncidencia(Incidencia incidencia) {
         if (incidencia != null) {
             this.incidencias.add(incidencia);
         }
     }
 
-    /**
-     * Agrega una lista completa de Incidencias (útil para la carga inicial desde el fichero).
-     */
+
+     //agrega una lista completa de Incidencias (útil para la carga inicial desde el fichero).
+
     public void agregarTodas(List<Incidencia> lista) {
         if (lista != null) {
             this.incidencias.addAll(lista);
         }
     }
 
-    /**
-     * Obtiene una sublista de incidencias filtrada por el nombre de usuario.
-     */
+
+    // Obtiene una sublista de incidencias filtrada por el nombre de usuario.
+
     public List<Incidencia> buscarPorUsuario(String usuario) {
         if (usuario == null || usuario.isEmpty()) {
             return List.of();
@@ -48,9 +47,7 @@ public class ListaIncidencia {
                 .collect(Collectors.toList());
     }
 
-    /**
-     * Devuelve todas las incidencias.
-     */
+    //traigo todas las incidencias
     public List<Incidencia> getTodasIncidencias() {
         return incidencias;
     }
