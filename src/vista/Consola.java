@@ -20,9 +20,9 @@ public class Consola {
         this.escaner = new Escaner();
     }
 
-    /**
-     * Método público para iniciar la aplicación (llamado desde Main).
-     */
+
+     //Metodo público para iniciar la aplicación (llamado desde Main).
+
     public void iniciar() {
         solicitarUsuario();
         mostrarMenuPrincipal();

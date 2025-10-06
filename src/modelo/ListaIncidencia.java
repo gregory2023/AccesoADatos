@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Clase que gestiona la colección de todas las Incidencias.
+ * Clase que gestiona la colección de todas las Incidencias en memoria.
  */
 public class ListaIncidencia {
 
@@ -42,7 +42,7 @@ public class ListaIncidencia {
             return List.of();
         }
 
-        // Aplica el filtro (lógica que estaba en ServicioFichero)
+        // Aplica el filtro (ignorando mayúsculas/minúsculas)
         return this.incidencias.stream()
                 .filter(i -> i.getUsuario().equalsIgnoreCase(usuario))
                 .collect(Collectors.toList());

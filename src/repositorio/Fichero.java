@@ -38,8 +38,6 @@ public class Fichero {
             return false;
         }
     }
-
-
     public List<Incidencia> cargarTodas() {
         if (!Files.exists(RUTA)) {
             return List.of();
@@ -48,7 +46,7 @@ public class Fichero {
         try {
             // Lee todas las líneas y las mapea a objetos Incidencia
             return Files.readAllLines(RUTA)
-                    .stream()
+                    .stream()//metodo de cinta transportadora
                     .map(Incidencia::fromString)
                     .collect(Collectors.toList());
         } catch (IOException e) {
@@ -57,7 +55,7 @@ public class Fichero {
             System.err.println("Detalles: " + e.getMessage());
             return List.of(); // Devuelve lista vacía en caso de error
         } catch (Exception e) {
-            // Captura si el formato de alguna línea es incorrecto (IllegalArgumentException, etc.)
+            // Captura si el formato de alguna línea es incorrecto (IllegalArgumentExceptioc.)
             System.err.println(" ERROR: Una línea del archivo tiene formato inválido y fue omitida.");
             return List.of();
         }

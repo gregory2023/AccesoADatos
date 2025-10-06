@@ -27,7 +27,7 @@ public class ServicioFichero {
         List<Incidencia> datosCargados = repositorio.cargarTodas();
         // La ListaIncidencia se encarga de agregarlos a su colección
         listaIncidencias.agregarTodas(datosCargados);
-        System.out.println("✅ Cargadas " + datosCargados.size() + " incidencias existentes.");
+        System.out.println("Se cargan " + datosCargados.size() + " incidencias existentes.");
     }
 
     /**

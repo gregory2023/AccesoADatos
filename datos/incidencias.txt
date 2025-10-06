@@ -1,6 +1,4 @@
-grego;2025-10-06T13:14:55.26087693;StringIndexOutOfBoundsException;Index 0 out of bounds for length 0
-grego;2025-10-06T13:15:40.082500568;StringIndexOutOfBoundsException;Index 0 out of bounds for length 0
-grego;2025-10-06T13:15:45.380020517;IllegalStateException;Excepción personalizada de usuario. Entrada: d
-grego;2025-10-06T13:15:51.434276826;IllegalStateException;Excepción personalizada de usuario. Entrada: 6
-grego;2025-10-06T13:15:55.200174215;IllegalStateException;Excepción personalizada de usuario. Entrada: -
-grego;2025-10-06T13:18:12.694749039;IllegalStateException;Excepción personalizada de usuario. Entrada: 2
+2025-10-06;14:00:21;IllegalStateException;Error: se esperaba un número pero metiste: 3;GREGO
+2025-10-06;14:06:39;IllegalStateException;Error: se esperaba un caracter  pero metiste: 4;grego
+2025-10-06;14:06:47;IllegalStateException;Error: se esperaba un caracter  pero metiste: 4;grego
+2025-10-06;14:07:36;IllegalStateException;Error: se esperaba un caracter  pero metiste: test;carlos
